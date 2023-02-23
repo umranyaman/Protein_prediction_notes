@@ -1,0 +1,29 @@
+# Basic Local Alignment using NCBI-Blast
+
+# Read single_seq.fasta
+read = SeqIO.read("Sequence_data/single_prot.fasta", "fasta")
+read.seq
+
+
+%%time
+
+# based on the server load this query might take 2-3 minutes to run
+result_handle = NCBIWWW.qblast("blastp", "pdb", read.seq)
+blast_qresult = SearchIO.read(result_handle, "blast-xml")
+
+print(blast_qresult[0:5])
+
+#fetch the id, description, evalue, bitscore & alignment of first hit
+
+seqid = blast_qresult[0]
+
+details = seqid[0]
+
+print(f"\
+Sequence ID:{seqid.id}\n\
+description:{seqid.description}\n\
+E value:    {details.evalue} \n\
+Bit Score:  {details.bitscore}\n\
+")
+
+print(f"alignment:\n{details.aln}")
