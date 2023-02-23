@@ -11,6 +11,8 @@
 
 3. Query Biological Databases using Biopython & web-scraping: This notebook shows how to programmatically query various biological databases using Biopython and web-scraping techniques.
 
+Note that this is an ongoing work and updates to the code and notebooks may occur.
+
 ## Usage
 
 To use this code, download the code and open the desired notebook in a Jupyter Notebook environment. Follow the instructions in each notebook to load transcript or protein sequences, query databases, and visualize results.
