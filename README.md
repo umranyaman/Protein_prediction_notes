@@ -1,4 +1,4 @@
-# Transcript to Protein (t2p)
+# Transcript Sequences to Protein Predictions 
 
 ## This code translates transcript variants to functional protein predictions using various biological databases.
 
